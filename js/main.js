@@ -21,12 +21,11 @@ function setupSmoothScrolling() {
     
     links.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                e.preventDefault();
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
                 
@@ -35,6 +34,7 @@ function setupSmoothScrolling() {
                     behavior: 'smooth'
                 });
             }
+            // If target element doesn't exist, let the link work normally
         });
     });
 }
