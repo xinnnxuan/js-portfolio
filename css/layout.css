@@ -56,6 +56,26 @@
 
 .nav-link {
     color: var(--primary-white);
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-white);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(0);
+    transform-origin: right center;
 }
 
 /* Main Title Layout */
