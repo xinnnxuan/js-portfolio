@@ -969,3 +969,170 @@
         font-size: var(--font-size-sm);
     }
 }
+
+/* Resume Page Responsive */
+@media (max-width: 768px) {
+    .resume-hero {
+        padding: 100px var(--spacing-lg) var(--spacing-2xl);
+    }
+    
+    .resume-title {
+        font-size: 4rem;
+    }
+    
+    .resume-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .resume-contact p {
+        font-size: var(--font-size-base);
+    }
+    
+    .download-button {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-content {
+        font-size: var(--font-size-sm);
+    }
+    
+    .job-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .company {
+        font-size: var(--font-size-base);
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .skill-category {
+        padding: var(--spacing-md);
+    }
+    
+    .skill-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .skill-category p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .education-item {
+        padding: var(--spacing-md);
+    }
+    
+    .degree {
+        font-size: var(--font-size-base);
+    }
+    
+    .school {
+        font-size: var(--font-size-sm);
+    }
+    
+    .athletic-list li {
+        font-size: var(--font-size-sm);
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button.primary,
+    .cta-button.secondary {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-md) var(--spacing-lg);
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-header {
+        padding: var(--spacing-lg);
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .resume-title {
+        font-size: 3rem;
+    }
+    
+    .resume-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .resume-contact p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .job-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .company {
+        font-size: var(--font-size-sm);
+    }
+    
+    .duration {
+        font-size: var(--font-size-xs);
+    }
+    
+    .job-achievements li {
+        font-size: var(--font-size-sm);
+    }
+    
+    .skill-title {
+        font-size: var(--font-size-sm);
+    }
+    
+    .skill-category p {
+        font-size: 0.6rem;
+    }
+    
+    .degree {
+        font-size: var(--font-size-sm);
+    }
+    
+    .school {
+        font-size: var(--font-size-xs);
+    }
+    
+    .status {
+        font-size: 0.6rem;
+    }
+    
+    .athletic-list li {
+        font-size: var(--font-size-xs);
+    }
+    
+    .cta-title {
+        font-size: 1.5rem;
+    }
+    
+    .cta-description {
+        font-size: var(--font-size-sm);
+    }
+}
