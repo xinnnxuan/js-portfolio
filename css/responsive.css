@@ -584,3 +584,167 @@
         color: var(--primary-white);
     }
 }
+
+/* About Page Responsive */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: var(--spacing-2xl) var(--spacing-lg);
+    }
+    
+    .hero-title h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero-tagline {
+        font-size: var(--font-size-lg);
+    }
+    
+    .mission-text p {
+        font-size: var(--font-size-base);
+    }
+    
+    .mission-tagline {
+        font-size: var(--font-size-lg);
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .section-intro p {
+        font-size: var(--font-size-base);
+    }
+    
+    .service-header h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .service-item p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .talent-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .talent-logo {
+        font-size: 3rem;
+    }
+    
+    .logo-game {
+        font-size: 2.5rem;
+    }
+    
+    .talent-right h2 {
+        font-size: 2rem;
+    }
+    
+    .talent-right p {
+        font-size: var(--font-size-base);
+    }
+    
+    .brands-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .brands-left h2 {
+        font-size: 2rem;
+    }
+    
+    .brands-tagline {
+        font-size: var(--font-size-base);
+    }
+    
+    .brands-left p {
+        font-size: var(--font-size-sm);
+        padding-left: var(--spacing-md);
+    }
+    
+    .brands-image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .sock-text {
+        font-size: 1.5rem;
+    }
+    
+    .process-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .process-header p {
+        font-size: var(--font-size-base);
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .process-step h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .process-step p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .cta-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+        text-align: center;
+    }
+    
+    .cta-left h2 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-left p {
+        font-size: var(--font-size-base);
+    }
+    
+    .cta-button {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header {
+        padding: var(--spacing-lg);
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .hero-title h1 {
+        font-size: 3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .talent-logo {
+        font-size: 2.5rem;
+    }
+    
+    .logo-game {
+        font-size: 2rem;
+    }
+    
+    .brands-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .cta-left h2 {
+        font-size: 2rem;
+    }
+}
