@@ -748,3 +748,224 @@
         font-size: 2rem;
     }
 }
+
+/* Works Page Responsive */
+@media (max-width: 768px) {
+    .magazine-hero {
+        padding: 100px var(--spacing-lg) var(--spacing-2xl);
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    
+    .magazine-title h1 {
+        font-size: 4rem;
+    }
+    
+    .magazine-subtitle {
+        text-align: left;
+    }
+    
+    .magazine-subtitle p {
+        font-size: var(--font-size-base);
+    }
+    
+    .services-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .services-list p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .services-description p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .magazine-row-1,
+    .magazine-row-2,
+    .magazine-row-3 {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .details-title {
+        font-size: 2rem;
+    }
+    
+    .details-text {
+        font-size: var(--font-size-sm);
+    }
+    
+    .editorial-text p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .cover-title {
+        font-size: 2.5rem;
+    }
+    
+    .cover-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .athletic-title {
+        font-size: 1.5rem;
+    }
+    
+    .athletic-subtitle {
+        font-size: var(--font-size-sm);
+    }
+    
+    .creative-title {
+        font-size: 1.3rem;
+    }
+    
+    .creative-subtitle {
+        font-size: var(--font-size-xs);
+    }
+    
+    .fashion-text p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .brand-title {
+        font-size: 1.2rem;
+    }
+    
+    .brand-subtitle {
+        font-size: var(--font-size-xs);
+    }
+    
+    .mood-board-title {
+        font-size: 2rem;
+    }
+    
+    .mood-board-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .mood-board-description {
+        font-size: var(--font-size-sm);
+    }
+    
+    .mood-board-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .mood-item-1,
+    .mood-item-3,
+    .mood-item-6 {
+        grid-column: 1 / 3;
+    }
+    
+    .mood-item-2,
+    .mood-item-4,
+    .mood-item-5,
+    .mood-item-7,
+    .mood-item-8 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    
+    .mood-board-text p {
+        font-size: var(--font-size-base);
+    }
+    
+    .mood-board-accent {
+        font-size: 1.5rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cta-title {
+        font-size: 2.5rem;
+    }
+    
+    .cta-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .cta-button {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .works-header {
+        padding: var(--spacing-lg);
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .magazine-title h1 {
+        font-size: 3rem;
+    }
+    
+    .magazine-subtitle p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .services-list p {
+        font-size: 0.6rem;
+    }
+    
+    .services-description p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .details-title {
+        font-size: 1.5rem;
+    }
+    
+    .cover-title {
+        font-size: 2rem;
+    }
+    
+    .athletic-title {
+        font-size: 1.2rem;
+    }
+    
+    .creative-title {
+        font-size: 1rem;
+    }
+    
+    .brand-title {
+        font-size: 1rem;
+    }
+    
+    .mood-board-title {
+        font-size: 1.5rem;
+    }
+    
+    .mood-board-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .mood-item-1,
+    .mood-item-3,
+    .mood-item-6 {
+        grid-column: 1;
+    }
+    
+    .mood-board-text p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .mood-board-accent {
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-description {
+        font-size: var(--font-size-sm);
+    }
+}
