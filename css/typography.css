@@ -1,0 +1,403 @@
+/* Typography Styles */
+
+/* Font imports are handled in HTML head */
+
+/* Base typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--font-size-6xl);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    font-size: var(--font-size-4xl);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h3 {
+    font-size: var(--font-size-3xl);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h4 {
+    font-size: var(--font-size-2xl);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h5 {
+    font-size: var(--font-size-xl);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h6 {
+    font-size: var(--font-size-lg);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+p {
+    margin: 0 0 var(--spacing-md) 0;
+    line-height: 1.6;
+}
+
+/* Specific typography classes */
+
+/* Hero section typography */
+.hero-title {
+    font-size: var(--font-size-8xl);
+    font-family: var(--font-bebas);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 0.9;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-2xl);
+    font-family: var(--font-primary);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Header typography */
+.header-text {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.header-line-1 {
+    font-size: var(--font-size-sm);
+    font-weight: 300;
+    margin-bottom: var(--spacing-xs);
+}
+
+.header-line-2 {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+}
+
+/* Navigation typography */
+.nav-link {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+/* Tagline typography */
+.tagline-bold {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tagline-script {
+    font-family: 'Dancing Script', cursive;
+    font-size: var(--font-size-3xl);
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-left: var(--spacing-sm);
+}
+
+/* Management section typography */
+.management-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-lg);
+}
+
+.management-subtitle {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.management-description {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.forward-momentum {
+    display: inline-block;
+    border: 1px solid var(--primary-white);
+    border-radius: 50px;
+    padding: var(--spacing-xs) var(--spacing-md);
+    margin: 0 var(--spacing-xs);
+}
+
+/* Player card typography */
+.card-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.card-subtitle {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--spacing-xs);
+}
+
+.card-description {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+}
+
+.player-signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: var(--font-size-2xl);
+    font-weight: 400;
+    color: var(--primary-white);
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    z-index: 10;
+}
+
+.player-stats {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-weight: 300;
+    margin-right: var(--spacing-sm);
+}
+
+.stat-value {
+    font-weight: 400;
+}
+
+/* Principles section typography */
+.principles-title {
+    font-family: var(--font-bebas);
+    font-size: var(--font-size-6xl);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.principles-label {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.principle-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.principle-description {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.principle-number {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Process section typography */
+.reach-out-link {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary-black);
+    transition: opacity 0.3s ease;
+}
+
+.reach-out-link:hover {
+    opacity: 0.7;
+}
+
+.process-title-line-1,
+.process-title-line-2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-5xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 0.9;
+}
+
+.process-description {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.process-hashtag {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--spacing-lg);
+}
+
+/* Final hero typography */
+.sports-line {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-md);
+}
+
+.final-title {
+    font-family: var(--font-bebas);
+    font-size: var(--font-size-8xl);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 0.9;
+}
+
+.name-label {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.player-name {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Footer typography */
+.footer-text {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+}
+
+.footer-link {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+.social-icon {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: var(--font-size-6xl);
+    }
+    
+    .final-title {
+        font-size: var(--font-size-6xl);
+    }
+    
+    .principles-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .process-title-line-1,
+    .process-title-line-2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .management-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .card-title {
+        font-size: var(--font-size-2xl);
+    }
+}

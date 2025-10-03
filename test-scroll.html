@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Test - FREEGAME Template</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+        }
+        .test-section:nth-child(even) {
+            background: linear-gradient(45deg, #e0e0e0, #d0d0d0);
+        }
+        .test-content {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .scroll-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator">
+        Scroll Position: <span id="scrollPosition">0</span>px
+    </div>
+    
+    <div class="test-container">
+        <h1>FREEGAME Template Scroll Test</h1>
+        <p>This page tests the scrollability of the template. Each section below is 100vh (full viewport height) to simulate the actual template sections.</p>
+        
+        <div class="test-section">
+            <div class="test-content">
+                Section 1 - Hero Section<br>
+                <small>Height: 100vh</small>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-content">
+                Section 2 - Management Section<br>
+                <small>Height: 100vh</small>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-content">
+                Section 3 - Player Card Section<br>
+                <small>Height: 100vh</small>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-content">
+                Section 4 - Principles Section<br>
+                <small>Height: 100vh</small>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-content">
+                Section 5 - Process Section<br>
+                <small>Height: 100vh</small>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-content">
+                Section 6 - Final Hero Section<br>
+                <small>Height: 100vh</small>
+            </div>
+        </div>
+        
+        <div style="height: 200px; background: #333; color: white; display: flex; align-items: center; justify-content: center; margin: 20px 0; border-radius: 8px;">
+            <div style="text-align: center;">
+                <h2>Scroll Test Complete!</h2>
+                <p>If you can see this section, the template is fully scrollable.</p>
+                <p>Total height: 6 × 100vh + 200px</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update scroll position indicator
+        function updateScrollPosition() {
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            document.getElementById('scrollPosition').textContent = Math.round(scrollPosition);
+        }
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', updateScrollPosition);
+        
+        // Initial update
+        updateScrollPosition();
+        
+        // Add smooth scrolling to sections
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Scroll test page loaded successfully');
+            console.log('Document height:', document.documentElement.scrollHeight);
+            console.log('Viewport height:', window.innerHeight);
+            console.log('Scrollable:', document.documentElement.scrollHeight > window.innerHeight);
+        });
+    </script>
+</body>
+</html>

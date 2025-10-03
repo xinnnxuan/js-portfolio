@@ -1,0 +1,581 @@
+/* Responsive Styles */
+
+/* Mobile First Approach */
+/* Base styles are for mobile (320px and up) */
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    :root {
+        --font-size-xs: 0.625rem;
+        --font-size-sm: 0.75rem;
+        --font-size-base: 0.875rem;
+        --font-size-lg: 1rem;
+        --font-size-xl: 1.125rem;
+        --font-size-2xl: 1.25rem;
+        --font-size-3xl: 1.5rem;
+        --font-size-4xl: 1.875rem;
+        --font-size-5xl: 2.25rem;
+        --font-size-6xl: 2.5rem;
+        --font-size-7xl: 3rem;
+        --font-size-8xl: 3.5rem;
+        --font-size-9xl: 4rem;
+        
+        --spacing-xs: 0.125rem;
+        --spacing-sm: 0.25rem;
+        --spacing-md: 0.5rem;
+        --spacing-lg: 0.75rem;
+        --spacing-xl: 1rem;
+        --spacing-2xl: 1.5rem;
+        --spacing-3xl: 2rem;
+        --spacing-4xl: 2.5rem;
+        --spacing-5xl: 3rem;
+    }
+    
+    /* Hero Section Mobile */
+    .hero-section {
+        height: 100vh;
+        padding: var(--spacing-md);
+    }
+    
+    .header {
+        padding: var(--spacing-md);
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .header-left {
+        order: 2;
+        text-align: center;
+    }
+    
+    .nav-links {
+        order: 1;
+        gap: var(--spacing-md);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        font-size: var(--font-size-xs);
+    }
+    
+    .main-title h1 {
+        font-size: var(--font-size-6xl);
+    }
+    
+    .hero-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-md);
+    }
+    
+    .tagline {
+        position: static;
+        transform: none;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-bottom-left,
+    .hero-bottom-right {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-xs);
+        text-align: center;
+    }
+    
+    /* Management Section Mobile */
+    .management-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .management-text {
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    .management-title {
+        font-size: var(--font-size-2xl);
+        text-align: center;
+    }
+    
+    .management-subtitle {
+        font-size: var(--font-size-lg);
+        text-align: center;
+    }
+    
+    .management-description {
+        font-size: var(--font-size-sm);
+        text-align: center;
+    }
+    
+    .management-images {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        height: auto;
+        gap: var(--spacing-md);
+    }
+    
+    .graph-paper,
+    .basketball-spin,
+    .baseball-player,
+    .runner,
+    .soccer-cleats {
+        grid-column: 1;
+        grid-row: auto;
+        height: 200px;
+    }
+    
+    /* Player Card Mobile */
+    .player-card-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .player-card {
+        transform: none;
+        margin: var(--spacing-lg) 0;
+        padding: var(--spacing-md);
+    }
+    
+    .player-card-header {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .card-title-center {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .player-image-container {
+        height: 300px;
+    }
+    
+    .player-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .player-stats {
+        position: static;
+        margin-top: var(--spacing-lg);
+        grid-template-columns: 1fr;
+    }
+    
+    /* Principles Mobile */
+    .principles-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .principles-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .principles-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .principle-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .principle-number {
+        text-align: center;
+    }
+    
+    /* Process Mobile */
+    .process-section {
+        min-height: auto;
+    }
+    
+    .process-top {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .process-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .process-line {
+        display: none;
+    }
+    
+    .process-title-line-1,
+    .process-title-line-2 {
+        font-size: var(--font-size-3xl);
+        text-align: center;
+    }
+    
+    .process-description {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Final Hero Mobile */
+    .final-hero-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .basketball-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .player-signature-final {
+        position: static;
+        transform: none;
+        margin-top: var(--spacing-md);
+    }
+    
+    .sports-line {
+        font-size: var(--font-size-lg);
+    }
+    
+    .final-title {
+        font-size: var(--font-size-6xl);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Mobile Landscape (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-section {
+        padding: var(--spacing-lg);
+    }
+    
+    .header {
+        padding: var(--spacing-lg);
+    }
+    
+    .nav-links {
+        gap: var(--spacing-lg);
+    }
+    
+    .main-title h1 {
+        font-size: var(--font-size-7xl);
+    }
+    
+    .management-images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    .graph-paper {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+    
+    .basketball-spin {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+    
+    .baseball-player {
+        grid-column: 1;
+        grid-row: 3 / 5;
+    }
+    
+    .runner {
+        grid-column: 2;
+        grid-row: 3 / 5;
+    }
+    
+    .soccer-cleats {
+        display: none;
+    }
+    
+    .player-card-header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    
+    .principle-content {
+        grid-template-columns: 1fr 2fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .principle-number {
+        text-align: right;
+    }
+    
+    .process-content {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-section {
+        padding: var(--spacing-xl);
+    }
+    
+    .header {
+        padding: var(--spacing-xl);
+    }
+    
+    .main-title h1 {
+        font-size: var(--font-size-8xl);
+    }
+    
+    .management-images {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .graph-paper {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+    
+    .basketball-spin {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+    
+    .baseball-player {
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+    
+    .runner {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .soccer-cleats {
+        grid-column: 2 / 4;
+        grid-row: 3;
+    }
+    
+    .player-card {
+        transform: rotate(1deg);
+    }
+    
+    .principle-content {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    
+    .process-content {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Desktop (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .hero-section {
+        padding: var(--spacing-2xl);
+    }
+    
+    .header {
+        padding: var(--spacing-2xl);
+    }
+    
+    .main-title h1 {
+        font-size: var(--font-size-9xl);
+    }
+    
+    .management-images {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .graph-paper {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .basketball-spin {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .baseball-player {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .runner {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    
+    .soccer-cleats {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+}
+
+/* Large Desktop (1441px and up) */
+@media (min-width: 1441px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-section {
+        padding: var(--spacing-3xl);
+    }
+    
+    .header {
+        padding: var(--spacing-3xl);
+    }
+    
+    .main-title h1 {
+        font-size: 10rem;
+    }
+    
+    .management-images {
+        height: 70vh;
+    }
+    
+    .player-card {
+        transform: rotate(2deg);
+    }
+}
+
+/* Ultra-wide (1920px and up) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .main-title h1 {
+        font-size: 12rem;
+    }
+    
+    .management-images {
+        height: 80vh;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image,
+    .player-image,
+    .basketball-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .hero-section {
+        height: auto;
+        page-break-after: always;
+    }
+    
+    .management-section,
+    .player-card-section,
+    .principles-section,
+    .process-section,
+    .final-hero-section {
+        page-break-after: always;
+    }
+    
+    .header,
+    .hero-bottom,
+    .final-footer {
+        display: none;
+    }
+    
+    .main-title h1 {
+        font-size: 3rem;
+        color: black;
+    }
+    
+    .management-title,
+    .principles-title,
+    .final-title {
+        color: black;
+    }
+    
+    .player-card {
+        transform: none;
+        border: 2px solid black;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-section,
+    .player-card,
+    .fade-in,
+    .slide-in-left,
+    .slide-in-right,
+    .scale-in {
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Accessibility - High Contrast */
+@media (prefers-contrast: high) {
+    .hero-image {
+        filter: grayscale(100%) contrast(150%);
+    }
+    
+    .btn {
+        border-width: 3px;
+    }
+    
+    .card {
+        border-width: 2px;
+    }
+    
+    .nav-link,
+    .footer-link {
+        text-decoration: underline;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .player-card-section,
+    .process-section {
+        background: var(--primary-black);
+        color: var(--primary-white);
+    }
+    
+    .player-card {
+        background: var(--primary-white);
+        color: var(--primary-black);
+    }
+    
+    .process-top {
+        background: var(--primary-white);
+    }
+    
+    .process-cta {
+        background: var(--primary-black);
+    }
+    
+    .reach-out-link {
+        color: var(--primary-white);
+    }
+}

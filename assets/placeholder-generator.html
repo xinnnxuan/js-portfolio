@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .download-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 8px 16px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FREEGAME Placeholder Image Generator</h1>
+        <p>This tool generates placeholder images for the FREEGAME portfolio template.</p>
+        
+        <div class="image-container">
+            <h3>Athlete Hero Image (1920x1080)</h3>
+            <canvas id="athlete-hero" width="1920" height="1080"></canvas>
+            <br>
+            <a id="athlete-hero-download" class="download-link" download="athlete-hero.jpg">Download Athlete Hero</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Graph Paper (400x300)</h3>
+            <canvas id="graph-paper" width="400" height="300"></canvas>
+            <br>
+            <a id="graph-paper-download" class="download-link" download="graph-paper.png">Download Graph Paper</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Basketball Spin (300x300)</h3>
+            <canvas id="basketball-spin" width="300" height="300"></canvas>
+            <br>
+            <a id="basketball-spin-download" class="download-link" download="basketball-spin.jpg">Download Basketball Spin</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Baseball Player (400x600)</h3>
+            <canvas id="baseball-player" width="400" height="600"></canvas>
+            <br>
+            <a id="baseball-player-download" class="download-link" download="baseball-player.jpg">Download Baseball Player</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Letterman Jacket (300x200)</h3>
+            <canvas id="letterman-jacket" width="300" height="200"></canvas>
+            <br>
+            <a id="letterman-jacket-download" class="download-link" download="letterman-jacket.png">Download Letterman Jacket</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Runner (400x600)</h3>
+            <canvas id="runner" width="400" height="600"></canvas>
+            <br>
+            <a id="runner-download" class="download-link" download="runner.jpg">Download Runner</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Soccer Cleats (300x300)</h3>
+            <canvas id="soccer-cleats" width="300" height="300"></canvas>
+            <br>
+            <a id="soccer-cleats-download" class="download-link" download="soccer-cleats.jpg">Download Soccer Cleats</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Basketball Player (400x400)</h3>
+            <canvas id="basketball-player" width="400" height="400"></canvas>
+            <br>
+            <a id="basketball-player-download" class="download-link" download="basketball-player.jpg">Download Basketball Player</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Basketball 3D (400x400)</h3>
+            <canvas id="basketball-3d" width="400" height="400"></canvas>
+            <br>
+            <a id="basketball-3d-download" class="download-link" download="basketball-3d.png">Download Basketball 3D</a>
+        </div>
+        
+        <div class="image-container">
+            <h3>Zeke Signature (200x100)</h3>
+            <canvas id="zeke-signature" width="200" height="100"></canvas>
+            <br>
+            <a id="zeke-signature-download" class="download-link" download="zeke-signature.png">Download Zeke Signature</a>
+        </div>
+        
+        <button onclick="generateAllImages()">Generate All Images</button>
+    </div>
+
+    <script>
+        function generateAthleteHero() {
+            const canvas = document.getElementById('athlete-hero');
+            const ctx = canvas.getContext('2d');
+            
+            // Dark background
+            ctx.fillStyle = '#1a1a1a';
+            ctx.fillRect(0, 0, 1920, 1080);
+            
+            // Add some texture
+            for (let i = 0; i < 1000; i++) {
+                ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
+                ctx.fillRect(Math.random() * 1920, Math.random() * 1080, 2, 2);
+            }
+            
+            // Add text overlay
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.font = 'bold 48px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('ATHLETE HERO IMAGE', 960, 540);
+            ctx.fillText('1920x1080', 960, 600);
+            
+            updateDownloadLink('athlete-hero', 'athlete-hero-download');
+        }
+        
+        function generateGraphPaper() {
+            const canvas = document.getElementById('graph-paper');
+            const ctx = canvas.getContext('2d');
+            
+            // White background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 400, 300);
+            
+            // Grid lines
+            ctx.strokeStyle = '#e0e0e0';
+            ctx.lineWidth = 1;
+            
+            // Vertical lines
+            for (let x = 0; x <= 400; x += 20) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, 300);
+                ctx.stroke();
+            }
+            
+            // Horizontal lines
+            for (let y = 0; y <= 300; y += 20) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(400, y);
+                ctx.stroke();
+            }
+            
+            // Torn edge effect
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            for (let x = 0; x <= 400; x += 10) {
+                const y = Math.sin(x * 0.1) * 5;
+                ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+            
+            updateDownloadLink('graph-paper', 'graph-paper-download');
+        }
+        
+        function generateBasketballSpin() {
+            const canvas = document.getElementById('basketball-spin');
+            const ctx = canvas.getContext('2d');
+            
+            // Dark background
+            ctx.fillStyle = '#2a2a2a';
+            ctx.fillRect(0, 0, 300, 300);
+            
+            // Basketball
+            const centerX = 150;
+            const centerY = 150;
+            const radius = 80;
+            
+            // Orange basketball
+            ctx.fillStyle = '#ff8c00';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Black lines
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 3;
+            
+            // Horizontal line
+            ctx.beginPath();
+            ctx.moveTo(centerX - radius, centerY);
+            ctx.lineTo(centerX + radius, centerY);
+            ctx.stroke();
+            
+            // Vertical line
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY - radius);
+            ctx.lineTo(centerX, centerY + radius);
+            ctx.stroke();
+            
+            // Curved lines
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI);
+            ctx.stroke();
+            
+            updateDownloadLink('basketball-spin', 'basketball-spin-download');
+        }
+        
+        function generateBaseballPlayer() {
+            const canvas = document.getElementById('baseball-player');
+            const ctx = canvas.getContext('2d');
+            
+            // Light background
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, 400, 600);
+            
+            // Player silhouette
+            ctx.fillStyle = '#333333';
+            ctx.fillRect(100, 50, 200, 500);
+            
+            // Hat
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(120, 50, 160, 80);
+            
+            // Add some details
+            ctx.fillStyle = '#666666';
+            ctx.fillRect(150, 200, 100, 200);
+            
+            // Text
+            ctx.fillStyle = '#000000';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('BASEBALL PLAYER', 200, 580);
+            
+            updateDownloadLink('baseball-player', 'baseball-player-download');
+        }
+        
+        function generateLettermanJacket() {
+            const canvas = document.getElementById('letterman-jacket');
+            const ctx = canvas.getContext('2d');
+            
+            // Green background
+            ctx.fillStyle = '#228B22';
+            ctx.fillRect(0, 0, 300, 200);
+            
+            // White sleeves
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 60, 200);
+            ctx.fillRect(240, 0, 60, 200);
+            
+            // Text
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 20px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('GAME', 100, 100);
+            ctx.fillText('FG', 200, 100);
+            
+            updateDownloadLink('letterman-jacket', 'letterman-jacket-download');
+        }
+        
+        function generateRunner() {
+            const canvas = document.getElementById('runner');
+            const ctx = canvas.getContext('2d');
+            
+            // Desert background
+            ctx.fillStyle = '#D2B48C';
+            ctx.fillRect(0, 0, 400, 600);
+            
+            // Runner silhouette
+            ctx.fillStyle = '#333333';
+            ctx.fillRect(150, 100, 100, 400);
+            
+            // Add motion blur effect
+            ctx.fillStyle = 'rgba(51, 51, 51, 0.3)';
+            ctx.fillRect(160, 100, 100, 400);
+            ctx.fillRect(170, 100, 100, 400);
+            
+            // Text
+            ctx.fillStyle = '#000000';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('RUNNER', 200, 580);
+            
+            updateDownloadLink('runner', 'runner-download');
+        }
+        
+        function generateSoccerCleats() {
+            const canvas = document.getElementById('soccer-cleats');
+            const ctx = canvas.getContext('2d');
+            
+            // Green grass background
+            ctx.fillStyle = '#228B22';
+            ctx.fillRect(0, 0, 300, 300);
+            
+            // Cleats
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(100, 200, 100, 80);
+            
+            // Add some grass texture
+            ctx.strokeStyle = '#32CD32';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < 50; i++) {
+                ctx.beginPath();
+                ctx.moveTo(Math.random() * 300, Math.random() * 300);
+                ctx.lineTo(Math.random() * 300, Math.random() * 300);
+                ctx.stroke();
+            }
+            
+            updateDownloadLink('soccer-cleats', 'soccer-cleats-download');
+        }
+        
+        function generateBasketballPlayer() {
+            const canvas = document.getElementById('basketball-player');
+            const ctx = canvas.getContext('2d');
+            
+            // White background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 400, 400);
+            
+            // Player
+            ctx.fillStyle = '#333333';
+            ctx.fillRect(150, 50, 100, 300);
+            
+            // Basketball
+            ctx.fillStyle = '#ff8c00';
+            ctx.beginPath();
+            ctx.arc(200, 300, 30, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Text
+            ctx.fillStyle = '#000000';
+            ctx.font = 'bold 20px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('BASKETBALL PLAYER', 200, 380);
+            
+            updateDownloadLink('basketball-player', 'basketball-player-download');
+        }
+        
+        function generateBasketball3D() {
+            const canvas = document.getElementById('basketball-3d');
+            const ctx = canvas.getContext('2d');
+            
+            // Black background
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, 400, 400);
+            
+            // 3D Basketball
+            const centerX = 200;
+            const centerY = 200;
+            const radius = 100;
+            
+            // Gradient for 3D effect
+            const gradient = ctx.createRadialGradient(centerX - 20, centerY - 20, 0, centerX, centerY, radius);
+            gradient.addColorStop(0, '#ffa500');
+            gradient.addColorStop(1, '#ff8c00');
+            
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Black lines
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 4;
+            
+            // Horizontal line
+            ctx.beginPath();
+            ctx.moveTo(centerX - radius, centerY);
+            ctx.lineTo(centerX + radius, centerY);
+            ctx.stroke();
+            
+            // Vertical line
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY - radius);
+            ctx.lineTo(centerX, centerY + radius);
+            ctx.stroke();
+            
+            // Curved lines
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI);
+            ctx.stroke();
+            
+            updateDownloadLink('basketball-3d', 'basketball-3d-download');
+        }
+        
+        function generateZekeSignature() {
+            const canvas = document.getElementById('zeke-signature');
+            const ctx = canvas.getContext('2d');
+            
+            // Transparent background
+            ctx.clearRect(0, 0, 200, 100);
+            
+            // Signature text
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'italic 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Zeke Jones', 100, 40);
+            ctx.fillText('22', 100, 70);
+            
+            updateDownloadLink('zeke-signature', 'zeke-signature-download');
+        }
+        
+        function updateDownloadLink(canvasId, linkId) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.getElementById(linkId);
+            link.href = canvas.toDataURL('image/png');
+        }
+        
+        function generateAllImages() {
+            generateAthleteHero();
+            generateGraphPaper();
+            generateBasketballSpin();
+            generateBaseballPlayer();
+            generateLettermanJacket();
+            generateRunner();
+            generateSoccerCleats();
+            generateBasketballPlayer();
+            generateBasketball3D();
+            generateZekeSignature();
+        }
+        
+        // Generate all images on load
+        window.onload = generateAllImages;
+    </script>
+</body>
+</html>
